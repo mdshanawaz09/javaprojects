@@ -1,0 +1,333 @@
+User.java
+import java.util.ArrayList;
+import java.util.List;
+
+public class User {
+    private String name;
+    private String emailId;
+    private String contactNumber;
+    private List<UserScore> userScoreList;
+
+    public User() {
+    }
+
+    public User(String name, String emailId, String contactNumber, List<UserScore> userScoreList) {
+        this.name = name;
+        this.emailId = emailId;
+        this.contactNumber = contactNumber;
+        this.userScoreList = userScoreList;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    public List<UserScore> getUserScoreList() {
+        return userScoreList;
+    }
+
+    public void setUserScoreList(List<UserScore> userScoreList) {
+        this.userScoreList = userScoreList;
+    }
+
+    public static List<User> prefill(){
+        List<User> list = new ArrayList<>();
+        list.add(new User("Harry","harry@gmail.com","9874585258",new ArrayList<UserScore>()));
+        list.add(new User("Oliver","oliver@gmail.com","9515951263",new ArrayList<UserScore>()));
+        list.add(new User("Danny","danny@gmail.com","8745874585",new ArrayList<UserScore>()));
+        list.add(new User("Matt","matt@gmail.com","9636925686",new ArrayList<UserScore>()));
+        list.add(new User("James","james@gmail.com","8454585263",new ArrayList<UserScore>()));
+        list.add(new User("Rob","rob@gmail.com","8475216953",new ArrayList<UserScore>()));
+        list.add(new User("Brandon","brandon@gmail.com","8457548965",new ArrayList<UserScore>()));
+        list.add(new User("Winn","winn@gmail.com","9231252136",new ArrayList<UserScore>()));
+        list.add(new User("Barry","barry@gmail.com","9568956235",new ArrayList<UserScore>()));
+        list.add(new User("Joe","joe@gmail.com","8525623568",new ArrayList<UserScore>()));
+        list.add(new User("John","john@gmail.com","8454575412",new ArrayList<UserScore>()));
+        list.add(new User("Slade","slade@gmail.com","9584758652",new ArrayList<UserScore>()));
+        return list;
+    }
+
+
+}
+-------------------------------------------------------------
+Course.java
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Course1 {
+    private String name;
+    private String category;
+    private Double price;
+    private List<UserScore> userScoreList;
+
+    public Course1() {
+    }
+
+    public Course1(String name, String category, Double price, List<UserScore> userScoreList) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+        this.userScoreList = userScoreList;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public List<UserScore> getUserScoreList() {
+        return userScoreList;
+    }
+
+    public void setUserScoreList(List<UserScore> userScoreList) {
+        this.userScoreList = userScoreList;
+    }
+
+    public static List<Course1> prefill(){
+        List<Course1> list = new ArrayList<>();
+        list.add(new Course1("ANGULAR","Web Development",Double.parseDouble("9360"),new ArrayList<UserScore>()));
+        list.add(new Course1("Web Developer","Web Development",Double.parseDouble("9600"),new ArrayList<UserScore>()));
+        list.add(new Course1("JavaScript","Web Development",Double.parseDouble("9699"),new ArrayList<UserScore>()));
+        list.add(new Course1("HTML CSS","Web Development",Double.parseDouble("9000"),new ArrayList<UserScore>()));
+        list.add(new Course1("MEAN Stack","Web Development",Double.parseDouble("9599"),new ArrayList<UserScore>()));
+        list.add(new Course1("C","Programming",Double.parseDouble("5000"),new ArrayList<UserScore>()));
+        list.add(new Course1("Java","Programming",Double.parseDouble("4999"),new ArrayList<UserScore>()));
+        list.add(new Course1("Python","Programming",Double.parseDouble("5299"),new ArrayList<UserScore>()));
+        list.add(new Course1("C Sharp","Programming",Double.parseDouble("4900"),new ArrayList<UserScore>()));
+        list.add(new Course1("AWS Developer","IT Software",Double.parseDouble("10000"),new ArrayList<UserScore>()));
+        list.add(new Course1("Ethical Hacking","IT Software",Double.parseDouble("9300"),new ArrayList<UserScore>()));
+        list.add(new Course1("PhotoShop CS","Design",Double.parseDouble("9299"),new ArrayList<UserScore>()));
+        list.add(new Course1("TShirt Design","Design",Double.parseDouble("8999"),new ArrayList<UserScore>()));
+        list.add(new Course1("3D Modelling","Design",Double.parseDouble("11999"),new ArrayList<UserScore>()));
+        list.add(new Course1("Music Theory","Music",Double.parseDouble("9499"),new ArrayList<UserScore>()));
+        list.add(new Course1("Learn Guitar","Music",Double.parseDouble("9999"),new ArrayList<UserScore>()));
+        list.add(new Course1("Become a Singer","Music",Double.parseDouble("7500"),new ArrayList<UserScore>()));
+        return list;
+    }
+
+
+}
+
+------------------------------
+userScore
+
+import java.util.*;
+
+public class UserScore {
+    private Double completionPercentage;
+    private User user;
+    private Course1 course1;
+
+    public UserScore() {
+    }
+
+    public UserScore(Double completionPercentage, User user, Course1 course1) {
+        this.completionPercentage = completionPercentage;
+        this.user = user;
+        this.course1 = course1;
+    }
+
+    public Double getCompletionPercentage() {
+        return completionPercentage;
+    }
+
+    public void setCompletionPercentage(Double completionPercentage) {
+        this.completionPercentage = completionPercentage;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Course1 getCourse1() {
+        return course1;
+    }
+
+    public void setCourse1(Course1 course1) {
+        this.course1 = course1;
+    }
+
+    public static Map<String,UserScore> getTopPerformer(List<UserScore> scoreList){
+        Map<String, UserScore> topPerformers = new TreeMap<>();
+
+        // Group UserScores by course name and find the top performer for each course
+        Map<String, List<UserScore>> courseScores = new HashMap<>();
+
+        for (UserScore score : scoreList) {
+            String courseName = score.getCourse1().getName();
+            courseScores.computeIfAbsent(courseName, k -> new ArrayList<>()).add(score);
+        }
+
+        for (Map.Entry<String, List<UserScore>> entry : courseScores.entrySet()) {
+            List<UserScore> scores = entry.getValue();
+            UserScore topScore = Collections.max(scores, Comparator.comparing(UserScore::getCompletionPercentage));
+            topPerformers.put(entry.getKey(), topScore);
+        }
+
+        return topPerformers;
+    }
+}
+
+---------------------------------------
+Object equals
+----------------------------
+
+
+import java.text.ParseException;
+import java.util.Scanner;
+
+public class Main3 {
+    public static void main(String[] args) throws ParseException {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter song 1 detail:");
+        String song1Detail = scanner.nextLine();
+        Song song1 = createSong(song1Detail);
+
+        System.out.println("Enter song 2 detail:");
+        String song2Detail = scanner.nextLine();
+        Song song2 = createSong(song2Detail);
+
+        System.out.println("\nSong 1");
+        System.out.println(song1);
+
+        System.out.println("\nSong 2");
+        System.out.println(song2);
+
+        if (song1.equals(song2)) {
+            System.out.println("\nSong 1 is same as Song 2");
+        } else {
+            System.out.println("\nSong 1 and Song 2 are different");
+        }
+
+        scanner.close();
+    }
+
+    public static Song createSong(String detail) throws ParseException {
+        String[] songDetails = detail.split(",");
+        String title = songDetails[0];
+        String genre = songDetails[1];
+        String duration = songDetails[2];
+        Double rating = Double.parseDouble(songDetails[3]);
+        return new Song(title, genre, duration, rating);
+    }
+}
+
+
+-----------------------
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Song {
+    private String title;
+    private String genre;
+    private Date duration;
+    private Double rating;
+
+    public Song() {
+    }
+
+    public Song(String title, String genre, String duration, Double rating) throws ParseException {
+        this.title = title;
+        this.genre = genre;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("mm:ss");
+        this.duration = dateFormat.parse(duration);
+        this.rating = rating;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public Date getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Date duration) {
+        this.duration = duration;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("mm:ss");
+        return String.format("Title: %s\nGenre: %s\nDuration: %s\nRating: %.1f",
+                title, genre, dateFormat.format(duration), rating);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Song otherSong = (Song) obj;
+        return title.equalsIgnoreCase(otherSong.title) && duration.equals(otherSong.duration);
+    }
+}-----------------
